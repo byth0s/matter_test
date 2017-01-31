@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+
+	<script type="text/javascript" src="/js/pixi.js"></script>
+	<script type="text/javascript" src="/js/game.js"></script>
+	<script type="text/javascript">
+		
+
+
+	</script>
+	<script type="text/javascript">
+				
+
+	var socket = io();
+	
+	socket.on('connect', function (data) {
+		console.log('Connecting to server');
+	});
+
+
+	socket.on('updateWorld',function(data){
+
+			game.updateObjects(data.objects);
+	});
+
+
+	</script>
+</head>
+<body onload="game.init();">
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
